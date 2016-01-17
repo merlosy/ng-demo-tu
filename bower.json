@@ -1,0 +1,17 @@
+{
+  "name": "ng-training-starterapp",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-aria": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "angular-cookies": "~1.4.8",
+    "angular-mocks": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-bootstrap": "~0.14.0",
+    "angular-resource": "~1.4.8",
+    "angular-messages": "~1.4.8",
+    "angular-animate": "~1.4.8"
+  }
+}

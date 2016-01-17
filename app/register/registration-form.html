@@ -1,0 +1,73 @@
+<h1>Inscription</h1>
+
+<form class="form-horizontal" name="registerForm" ng-submit="register(registerForm.$valid)" novalidate>
+
+	<div class="form-group" ng-class="{'has-error': registerForm.nom.$invalid && ( registerForm.nom.$dirty || registerForm.$submitted) }">
+		<label class="control-label col-md-4">Nom :</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" ng-model="user.nom" name="nom"
+				required >
+			<div ng-messages="registerForm.nom.$error" role="alert" class="ngmessage ngmessage-error" 
+				ng-show="registerForm.nom.$dirty || registerForm.$submitted">
+                <div ng-message="required">Renseignez votre nom</div>
+            </div>
+		</div>
+	</div>
+
+	<div class="form-group" ng-class="{'has-error': registerForm.prenom.$invalid && ( registerForm.prenom.$dirty || registerForm.$submitted) }">
+		<label class="control-label col-md-4">Prénom :</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" ng-model="user.prenom" name="prenom"
+				required >
+			<div ng-messages="registerForm.prenom.$error" role="alert" class="ngmessage ngmessage-error" 
+				ng-show="registerForm.prenom.$dirty || registerForm.$submitted">
+                <div ng-message="required">Renseignez votre prénom</div>
+            </div>
+		</div>
+	</div>
+
+	<div class="form-group" ng-class="{'has-error': registerForm.email.$invalid && ( registerForm.email.$dirty || registerForm.$submitted) }">
+		<label class="control-label col-md-4">E-mail :</label>
+		<div class="col-md-4">
+			<input type="email" class="form-control" ng-model="user.email" name="email"
+				required >
+			<div ng-messages="registerForm.email.$error" role="alert" class="ngmessage ngmessage-error" 
+				ng-show="registerForm.email.$dirty || registerForm.$submitted">
+                <div ng-message="required">Renseignez votre e-mail</div>
+                <div ng-message="email">Votre e-mail est invalide</div>
+            </div>
+		</div>
+	</div>
+
+	<div class="form-group" ng-class="{'has-error': registerForm.password.$invalid && ( registerForm.password.$dirty || registerForm.$submitted) }">
+		<label class="control-label col-md-4">Mot de passe :</label>
+		<div class="col-md-4">
+			<input type="password" class="form-control" ng-model="user.password" name="password"
+				required >
+			<div ng-messages="registerForm.password.$error" role="alert" class="ngmessage ngmessage-error" 
+				ng-show="registerForm.password.$dirty || registerForm.$submitted">
+                <div ng-message="required">Renseignez votre mot de passe</div>
+            </div>
+		</div>
+	</div>
+
+	<div class="form-group" ng-class="{'has-error': registerForm.passwordConfirm.$invalid && ( registerForm.passwordConfirm.$dirty || registerForm.$submitted) }">
+		<label class="control-label col-md-4">Confirmation mot de passe :</label>
+		<div class="col-md-4">
+			<input type="password" class="form-control" ng-model="passwordConfirm" name="passwordConfirm"
+				equal="user.password"
+				required >
+			<div ng-messages="registerForm.passwordConfirm.$error" role="alert" class="ngmessage ngmessage-error" 
+				ng-show="registerForm.passwordConfirm.$dirty || registerForm.$submitted">
+                <div ng-message="required">Confirmez votre mot de passe</div>
+                <div ng-message="equal">Vos mots de passe ne correspondent pas</div>
+            </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-4">
+			<button type="submit" class="btn btn-primary">S'inscrire</button>
+		</div>
+	</div>
+</form>
