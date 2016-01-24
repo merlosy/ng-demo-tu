@@ -34,12 +34,12 @@
 		        	validity = false;
 		        }
 		        ctrl.$setValidity('equal', validity);
-		        // console.log("equal", (new Date(scope.dateAfter)).toString(), validity);
+		        // console.log("equal", validity);
     		}
 
 			function customValidator(ngModelValue) {
         		
-        		scope.$watch(function(){ return scope.$eval(attr.dateAfter);}, 
+        		scope.$watch(function(){ return scope.$eval(attr.equal);}, 
         			function(newVal, oldVal){
         			if (angular.isDefined(newVal) && newVal!==oldVal ){
         				runCheck(ngModelValue);
