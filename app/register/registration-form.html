@@ -7,7 +7,7 @@
 		<div class="col-md-4">
 			<input type="text" class="form-control" ng-model="user.nom" name="nom"
 				required >
-			<div ng-messages="registerForm.nom.$error" role="alert" class="ngmessage ngmessage-error" 
+			<div ng-messages="registerForm.nom.$error" role="alert" class="ngmessage ngmessage-error"
 				ng-show="registerForm.nom.$dirty || registerForm.$submitted">
                 <div ng-message="required">Renseignez votre nom</div>
             </div>
@@ -26,7 +26,7 @@
 		<div class="col-md-4">
 			<input type="email" class="form-control" ng-model="user.email" name="email"
 				required >
-			<div ng-messages="registerForm.email.$error" role="alert" class="ngmessage ngmessage-error" 
+			<div ng-messages="registerForm.email.$error" role="alert" class="ngmessage ngmessage-error"
 				ng-show="registerForm.email.$dirty || registerForm.$submitted">
                 <div ng-message="required">Renseignez votre e-mail</div>
                 <div ng-message="email">Votre e-mail est invalide</div>
@@ -46,7 +46,7 @@
 		<div class="col-md-4">
 			<input type="password" class="form-control" ng-model="user.password" name="password"
 				required >
-			<div ng-messages="registerForm.password.$error" role="alert" class="ngmessage ngmessage-error" 
+			<div ng-messages="registerForm.password.$error" role="alert" class="ngmessage ngmessage-error"
 				ng-show="registerForm.password.$dirty || registerForm.$submitted">
                 <div ng-message="required">Renseignez votre mot de passe</div>
             </div>
@@ -59,7 +59,7 @@
 			<input type="password" class="form-control" ng-model="passwordConfirm" name="passwordConfirm"
 				equal="user.password"
 				required >
-			<div ng-messages="registerForm.passwordConfirm.$error" role="alert" class="ngmessage ngmessage-error" 
+			<div ng-messages="registerForm.passwordConfirm.$error" role="alert" class="ngmessage ngmessage-error"
 				ng-show="registerForm.passwordConfirm.$dirty || registerForm.$submitted">
                 <div ng-message="required">Confirmez votre mot de passe</div>
                 <div ng-message="equal">Vos mots de passe ne correspondent pas</div>
@@ -69,7 +69,7 @@
 
 	<div class="row">
 		<div class="col-md-8 col-md-offset-4">
-			<button type="submit" class="btn btn-primary">S'inscrire</button>
+			<button id="inscription" type="submit" class="btn btn-primary">S'inscrire</button>
 		</div>
 	</div>
 </form>
