@@ -1,6 +1,6 @@
 (function(){
 	'use strict';
-    
+
     /**
      *  Application main module.
      *  @module app
@@ -16,7 +16,7 @@
         // vendor modules
         'ngRoute',
         "ngMessages",
-        "ngAnimate",
+       // "ngAnimate",
         // application modules
         'myapp.constants',
         'register',
@@ -31,9 +31,9 @@
      *  @param {object} APP project configuration
      */
     function AppConfig($logProvider, $routeProvider, APP) {
-        
+
         $logProvider.debugEnabled(APP.debugActive);
-        
+
         $routeProvider.when('/', {
             templateUrl: 'home/home.html'
         })
@@ -44,7 +44,7 @@
         .otherwise({
             redirectTo: '/'
         });
-        
+
     }
 
 
@@ -60,7 +60,7 @@
         // ----- private
 
         function isEmpty(str) {
-            return angular.isUndefined(str) || str===null || str==='' ; 
+            return angular.isUndefined(str) || str===null || str==='' ;
         };
 
     }
