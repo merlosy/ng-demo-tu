@@ -29,7 +29,6 @@
     			'$scope' : scope, 
           'UserService' : UserService,
     			'$location' : location,
-    			// 'Person' : Person,
     			'$q' : $q
     		});
 

@@ -21,7 +21,9 @@ module.exports = function (grunt) {
     app: 'app',
     config: 'config',
     dist: 'dist',
-    test: 'test'
+    test: 'test',
+    testUnit: 'test/spec',
+    testE2E: 'test/e2e'
   };
 
   // Define the configuration for all the tasks
@@ -44,7 +46,7 @@ module.exports = function (grunt) {
         }
       },
       jsTest: {
-        files: ['<%= config.test %>/spec/**/*.js'],
+        files: ['<%= config.testUnit %>/**/*.js'],
         tasks: ['jshint:test', 'karma']
       },
       gruntfile: {
@@ -135,13 +137,13 @@ module.exports = function (grunt) {
         '<%= config.app %>/**/*.js',
         '!<%= config.app %>/scripts/vendor/*',
         //'!<%= config.app %>/**/*.mock.js',
-        'test/spec/{,*/}*.js'
+        '<%= config.testUnit %>/{,*/}*.js'
       ],
       test: {
         options: {
           jshintrc: '.jshintrc'
         },
-        src: ['<%= config.test %>/spec/**/*.js']
+        src: ['<%= config.testUnit %>/**/*.js']
       }
     },
 

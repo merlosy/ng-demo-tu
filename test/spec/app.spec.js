@@ -14,7 +14,7 @@
     		// The injector unwraps the underscores (_) from around the parameter names when matching
     		$rootScope = _$rootScope_;
     		$q = _$q_;
-
+ 
     		scope = $rootScope.$new();
 
     		// ContactsService = jasmine.createSpyObj('ContactsService', ['save', 'query', 'update', 'delete']);
